@@ -1,0 +1,6 @@
+Evaluation metrics of the linear regression model:
+
+R² Score: 0.984
+Mean Squared Error: 17.960
+Root Mean Squared Error: 4.238
+Mean Absolute Error: 2.605
