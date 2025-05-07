@@ -1,100 +1,141 @@
-# ⚡🔋 Steel industry energy consumption forecasting
- 
-This repository contains a machine learning project aimed at forecasting energy consumption in the steel industry. 
+# ⚡🔋 Steel Industry Energy Consumption Forecasting
 
-The complete project is available in the Jupyter notebook titled **steel-industry-energy-consumption-forecasting.ipynb** in this repository.
-
-## Table of content
- - [Introduction](https://github.com/herrerovir/ML-steel-industry-energy-consumption-forecasting/blob/main/README.md#Introduction)
- - [Goal](https://github.com/herrerovir/ML-steel-industry-energy-consumption-forecasting/blob/main/README.md#Goal)
- - [Dependencies](https://github.com/herrerovir/ML-steel-industry-energy-consumption-forecasting/blob/main/README.md#Dependencies)
- - [Dataset](https://github.com/herrerovir/ML-steel-industry-energy-consumption-forecasting/blob/main/README.md#Dataset)
- - [Project overview](https://github.com/herrerovir/ML-steel-industry-energy-consumption-forecasting/blob/main/README.md#Project-overview)
- - [Data loading](https://github.com/herrerovir/ML-steel-industry-energy-consumption-forecasting/blob/main/README.md#Data-loading)
- - [Data cleaning](https://github.com/herrerovir/ML-steel-industry-energy-consumption-forecasting/blob/main/README.md#Data-cleaning)
- - [Data exploration](https://github.com/herrerovir/ML-steel-industry-energy-consumption-forecasting/blob/main/README.md#Data-exploration)
- - [Linear regression model](https://github.com/herrerovir/ML-steel-industry-energy-consumption-forecasting/blob/main/README.md#Linear-regression-model)
- - [Insights](https://github.com/herrerovir/ML-steel-industry-energy-consumption-forecasting/blob/main/README.md#Insights)
- - [Learning outcomes](https://github.com/herrerovir/ML-steel-industry-energy-consumption-forecasting/blob/main/README.md#Learning-outcomes)
+This repository contains a machine learning project that forecasts energy consumption in the steel industry using linear regression.
 
 ## Introduction
 
 The steel industry is crucial to modern manufacturing but is also a major consumer of energy, leading to high operational costs and environmental impacts. As demand for steel rises, optimizing energy consumption becomes increasingly urgent.
 
-## Goal
+## 🎯 Goal
 
-This machine learning project focuses on analyzing energy consumption patterns within the steel industry, focusing on data from DAEWOO Steel Co. Ltd in Gwangyang, South Korea, which produces various coils, steel plates, and iron plates. By leveraging historical data and operational parameters, the project aims to identify key factors influencing energy use and develop predictive models to enhance energy efficiency. Ultimately, this initiative seeks to provide actionable insights that promote sustainability and reduce the carbon footprint of steel production.
+The objective is to develop a predictive model that accurately forecasts energy consumption in a steel manufacturing setting. By analyzing historical data and training a machine learning model, the project aims to provide actionable insights that promote sustainability and reduce the carbon footprint of steel production.
 
-## Dependencies
+## 🔄 Project Overview
 
-The following tools are required to carry out this project:
+This project is structure in four main phases:
 
-* Python 3
-* Jupyter Notebooks
-* Python libraries: 
-    - Numpy
-    - Pandas
-    - Matplotlib.pyplot
-    - Seaborn
-    - Scikit-learn
+- Loading and cleaning a real-world dataset from the steel industry  
+- Exploring and analyzing relationships between energy metrics  
+- Building a linear regression model to forecast consumption  
+- Evaluating the model performance
 
-## Dataset
+## 🧰 Dependencies
 
-The dataset used for this project was sourced from the UC Irvine Machine Learning Repository. It is available in a CSV file uploaded to this repository under the name "steel-industry-data"
+The libraries used:
 
-The dataset consists of:
-* 35040 rows
-* 11 columns
+- `pandas` – Data manipulation  
+- `numpy` – Numerical computation  
+- `matplotlib` and `seaborn` – Data visualization  
+- `scikit-learn` – Machine learning
 
-## Project overview
+## 💻 How to Run the Project
 
-* Data loading
-* Data cleaning
-* Data exploration
-* Linear regression model
+1. **Clone the Repository**
 
-## Data loading
+   Start by cloning the repository to your local machine using the following command:
 
-The CSV dataset is loaded into Jupyter Notebooks as a Pandas DataFrame. 
+   ```shell
+   git clone https://github.com/herrerovir/Steel-industry-energy-consumption-forecasting.git
+   ```
 
-## Data cleaning
+   Change to the project directory:
 
-Data cleaning is a essential step in this project. It involves identifying and correcting errors and inconsistencies in a dataset, ensuring high-quality data for analysis. It is crucial because it improves accuracy, maintains consistency, handles missing values, enhances model performance ultimately leading to more reliable insights.
+   ```shell
+   cd Steel-industry-energy-consumption-forecasting
+   ```
 
-## Data exploration
+2. **Install Dependencies**
 
-To extract valuable insights from the dataset, a thorough exploratory analysis was conducted. This analysis included both univariate and bivariate approaches.
+   Install the required dependencies listed in the `requirements.txt`:
 
-Univariate analysis focused on examining each variable in the dataset individually.
+   ```shell
+   pip install -r requirements.txt
+   ```
 
-Bivariate analysis involved exploring the relationships between pairs of variables to identify any dependencies or correlations.
+   This will install all necessary libraries such as pandas, numpy, matplotlib, and seaborn.
 
-## Linear regression model
+3. **Run the Jupyter Notebook**
+
+   After installing the dependencies, you can run the Jupyter notebook to perform the data analysis. To start the notebook, use the following command:
+
+   ```shell
+   jupyter notebook notebooks/Steel-industry-energy-consumption-forecasting.ipynb
+   ```
+
+## 📂 Repository Structure
+
+```
+Steel-industry-energy-consumption-forecasting/
+│
+├── data/
+│   └── raw/
+│       └── steel_industry_data.csv                             # Original dataset
+│   └── processed/
+│       └── steel_industry_cleaned_data.csv                     # Clean and processed dataset
+│
+├── model/
+│   └── linear-regression-model.pkl                             # Trained model
+│
+├── notebooks/
+│   └── Steel-industry-energy-consumption-forecasting.ipynb     # Jupyter Notebook with the full analysis
+│
+├── results/
+│   └── figures/
+│       └── Correlation-heatmap.png                             # Visualizations
+│       └── Linear-regression-model-actual-vs-predicted         # Visualizations
+│   └── model-results/
+│       └── model-results.txt                                   # Results from the model as txt file
+│
+├── requirements.txt                                            # Requirements file
+│
+└── README.md                                                   # Project overview and documentation
+```
+
+## 🧠 Technical Skills Demonstrated
+
+- Data cleaning and preprocessing  
+- Exploratory Data Analysis (EDA)  
+- Model development and evaluation  
+- Regression techniques in `scikit-learn`  
+- Visualization and interpretation of model results
+
+## 📊 Dataset
+
+The dataset used for this analysis is a CSV file (`steel-industry-data.csv`) containing key features:
+
+- Energy consumption  
+- CO₂ emissions  
+- Reactive power  
+- Power factor  
+- Load type
+
+## 🧪 Steps
+
+1. **Data Loading** – Read the CSV into a DataFrame  
+2. **Data Cleaning** – Handle missing data and outliers  
+3. **EDA** – Visualize and understand feature relationships  
+4. **Model Training** – Use linear regression to predict energy use  
+5. **Evaluation** – Use MAE, RMSE, and R² for model assessment
+
+## 📉 Linear Regression Model
 
 A linear regression model is selected for this machine learning project because the target variable is continuous and the relationships among the features are linear. Here are key reasons for this choice:
 
-* **Simplicity and interpretability:** the model is easy to understand, with coefficients that clearly illustrate relationships between features and the target variable.
-* **Assumptions of linearity:** linear regression effectively captures the linear dynamics between features and the target variable, leading to accurate predictions.
-* **Efficiency:** it is computationally efficient to train, requiring less processing power, making it suitable for large datasets.
-* **Baseline model:** it serves as a solid baseline, helping evaluate the performance of more complex models if needed.
-* **Reduced overfitting risk:** its simplicity minimizes the risk of overfitting, particularly with a manageable number of features.
+- **Simplicity and interpretability:** the model is easy to understand, with coefficients that clearly illustrate relationships between features and the target variable.
+- **Assumptions of linearity:** linear regression effectively captures the linear dynamics between features and the target variable, leading to accurate predictions.
+- **Efficiency:** it is computationally efficient to train, requiring less processing power, making it suitable for large datasets.
+- **Baseline model:** it serves as a solid baseline, helping evaluate the performance of more complex models if needed.
+- **Reduced overfitting risk:** its simplicity minimizes the risk of overfitting, particularly with a manageable number of features.
 
 These factors make linear regression an effective choice for this project.
 
-## Insights
+## 💡 Insights
 
 The main goal of this project is to identify key factors influencing energy use and develop predictive models to enhance energy efficiency. A linear regression model was built and evaluated using several metrics: the coefficient of determination, mean squared error, root mean squared error, and mean absolute error—all indicating strong model performance. Additionally, the results include visualizations comparing the model's predictions to the actual values.
 
-![Linear Regression Model Visualization](https://github.com/user-attachments/assets/10f6f6fd-cd1d-48a0-877d-a573df4b3afc)
+## 📚 Learning Outcomes
 
-## Learning outcomes:
-
-* **Data preprocessing:** gain skills in cleaning and preparing data, including handling missing values and feature selection.
-
-* **Linear regression application:** understand the principles of linear regression, model fitting, and interpretation of coefficients in the context of energy consumption.
-
-* **Model evaluation:** learn to apply different evaluation metrics to assess forecasting accuracy.
-
-* **Practical experience with tools and libraries:** acquire hands-on experience using libraries like Pandas, NumPy, and Scikit-learn for data manipulation and modeling.
-
-* **Visualization skills:** enhance abilities in data visualization to effectively present findings and communicate relationships between variables and energy consumption.
+- Hands-on experience in the machine learning workflow  
+- Improved understanding of industrial energy metrics  
+- Enhanced skills in data visualization and modeling  
+- Learned how to interpret and communicate regression results 
